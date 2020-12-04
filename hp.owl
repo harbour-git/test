@@ -42993,7 +42993,7 @@ hp:VidhanSabhaElection rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://dbpedia.org/ontology/
+###  urn:absolute://harbourpolitica/ontology/
 : rdf:type owl:NamedIndividual ,
            <http://purl.org/vocommons/voaf#Vocabulary> .
 
