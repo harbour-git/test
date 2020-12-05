@@ -22,124 +22,524 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
 
-<rdf:Description rdf:about="neo4j://individuals#0">
-	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Nityanand_Rai</hp:wikipediaUrl>
-	<hp:sex>M</hp:sex>
-	<hp:name>Nityanand Rai</hp:name>
-	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:edbId>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
-	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">53</hp:age>
-	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2014>
-	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">146743540</hp:hasAssets2014>
-	<hp:identifier>07f17c57-2407-47d8-90bd-638f8cb5d485</hp:identifier>
-	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">357561</hp:hasLiabilities2019>
-	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:hasCriminalcases2019>
-	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/07f17c57-2407-47d8-90bd-638f8cb5d485</hp:uri>
-	<hp:hpIdn>CAN1000332</hp:hpIdn>
-	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3965422</hp:hasLiabilities2014>
-	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">187007570</hp:hasAssets2019>
-	<hp:hasCurrentPosition>MP</hp:hasCurrentPosition>
+<rdf:Description rdf:about="neo4j://individuals#20">
 	<hp:latestElectionResult>WON</hp:latestElectionResult>
-	<hp:wikidataId>http://www.wikidata.org/entity/Q16734872</hp:wikidataId>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
-	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="neo4j://individuals#1">
-	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">58</hp:age>
-	<hp:sex>M</hp:sex>
-	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2019>
-	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/b4567289-44dd-471a-9037-e8e2b31e064c</hp:uri>
-	<hp:identifier>b4567289-44dd-471a-9037-e8e2b31e064c</hp:identifier>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
-	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:edbId>
-	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2014>
-	<hp:wikidataId>http://www.wikidata.org/entity/Q3634892</hp:wikidataId>
+	<hp:hasCurrentPosition>Ex-Cabinet Minister</hp:hasCurrentPosition>
+	<hp:name>Mullappally Ramachandran</hp:name>
+	<hp:hpIdn>CAN1002951</hp:hpIdn>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">21</hp:edbId>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9225000</hp:hasAssets2014>
 	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
-	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2019>
-	<hp:hpIdn>CAN1000410</hp:hpIdn>
-	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">552076</hp:hasLiabilities2009>
-	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">62545997</hp:hasAssets2014>
-	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Rajiv_Pratap_Rudy</hp:wikipediaUrl>
-	<hp:name>Rajiv Pratap Rudy</hp:name>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">502346</hp:hasLiabilities2009>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q3595241</hp:wikidataId>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:sex>M</hp:sex>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1890000</hp:hasLiabilities2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:identifier>e81da788-8a3c-4c0f-ab33-a03a686adab7</hp:identifier>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Mullappally_Ramachandran</hp:wikipediaUrl>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">67</hp:age>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3316300</hp:hasAssets2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/e81da788-8a3c-4c0f-ab33-a03a686adab7</hp:uri>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#21">
+	<hp:hpIdn>CAN1002963</hp:hpIdn>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2063744</hp:hasLiabilities2014>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">22</hp:edbId>
+	<hp:sex>M</hp:sex>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<hp:identifier>d5e71946-bff4-484c-b79c-ddc782d89c88</hp:identifier>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/d5e71946-bff4-484c-b79c-ddc782d89c88</hp:uri>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">67</hp:age>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">28000209</hp:hasAssets2014>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">16335679</hp:hasAssets2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:name>P C Chacko</hp:name>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#22">
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:name>Asaduddin Owaisi</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">40611099</hp:hasAssets2014>
+	<hp:hpIdn>CAN1003073</hp:hpIdn>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Asaduddin_Owaisi</hp:wikipediaUrl>
+	<hp:identifier>87471b66-34c8-4e59-87da-c167d0103f49</hp:identifier>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2014>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">179044376</hp:hasAssets2019>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9302233</hp:hasAssets2009>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">120624979</hp:hasLiabilities2019>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">49</hp:age>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">23</hp:edbId>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</hp:hasCriminalcases2019>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2009>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/87471b66-34c8-4e59-87da-c167d0103f49</hp:uri>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14000000</hp:hasLiabilities2014>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q3210225</hp:wikidataId>
 	<hp:hasCurrentPosition>MP</hp:hasCurrentPosition>
 	<hp:latestElectionResult>WON</hp:latestElectionResult>
-	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">80740349</hp:hasAssets2019>
-	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">24586315</hp:hasAssets2009>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
 	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
-	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1008658</hp:hasLiabilities2014>
 </rdf:Description>
 
-<rdf:Description rdf:about="neo4j://individuals#2">
-	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">17695194</hp:hasLiabilities2019>
-	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
-	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">46</hp:age>
-	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
-	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">81242965</hp:hasAssets2014>
-	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</hp:hasCriminalcases2019>
-	<hp:latestElectionResult>LOST</hp:latestElectionResult>
-	<hp:hpIdn>CAN1000451</hp:hpIdn>
-	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:edbId>
-	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
-	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2009>
-	<hp:sex>F</hp:sex>
-	<hp:identifier>585eb589-cd0c-42a1-9a1d-349af509af5e</hp:identifier>
-	<hp:wikidataId>http://www.wikidata.org/entity/Q7293123</hp:wikidataId>
-	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1537688</hp:hasAssets2009>
+<rdf:Description rdf:about="neo4j://individuals#23">
 	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
-	<hp:name>Ranjeet Ranjan</hp:name>
+	<hp:hpIdn>CAN1003161</hp:hpIdn>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">99602120</hp:hasAssets2014>
+	<hp:sex>M</hp:sex>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2042919</hp:hasLiabilities2009>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4675760</hp:hasLiabilities2014>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:name>Jaipal Reddy Sudini</hp:name>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">24</hp:edbId>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">72</hp:age>
 	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
-	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2014>
-	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Ranjeet_Ranjan</hp:wikipediaUrl>
-	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">119543561</hp:hasAssets2019>
-	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</hp:hasCriminalcases2014>
-	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/585eb589-cd0c-42a1-9a1d-349af509af5e</hp:uri>
+	<hp:hasCurrentPosition>Ex-Leader of Opposition RS</hp:hasCurrentPosition>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/a02002ff-cbb6-4dca-9041-530d07f84f96</hp:uri>
+	<hp:identifier>a02002ff-cbb6-4dca-9041-530d07f84f96</hp:identifier>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">56150333</hp:hasAssets2009>
 </rdf:Description>
 
-<rdf:Description rdf:about="neo4j://individuals#3">
-	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45</hp:age>
-	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">13947594</hp:hasLiabilities2014>
+<rdf:Description rdf:about="neo4j://individuals#24">
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/7c6a4ffa-8d4f-42d6-8e53-e74144b5c213</hp:uri>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:identifier>7c6a4ffa-8d4f-42d6-8e53-e74144b5c213</hp:identifier>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">22669420</hp:hasAssets2009>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:hasCriminalcases2014>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:hasCriminalcases2009>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">151582464</hp:hasAssets2014>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">60</hp:age>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">25</hp:edbId>
+	<hp:name>Kalvakuntla Chandrashekar Rao</hp:name>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasCurrentPosition>Chief Minister</hp:hasCurrentPosition>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:hpIdn>CAN1003175</hp:hpIdn>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">78753620</hp:hasLiabilities2014>
 	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
-	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Syed_Shahnawaz_Hussain</hp:wikipediaUrl>
-	<hp:wikidataId>http://www.wikidata.org/entity/Q7660441</hp:wikidataId>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#25">
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">119108338</hp:hasAssets2009>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3509798</hp:hasLiabilities2019>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:identifier>f9ebd788-0e9a-4a64-89c0-20e62150a9d8</hp:identifier>
+	<hp:name>Madhusudan</hp:name>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2019>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">298919187</hp:hasAssets2014>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">362049049</hp:hasAssets2019>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">61</hp:age>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">26</hp:edbId>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">15422084</hp:hasLiabilities2009>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5098943</hp:hasLiabilities2014>
+	<hp:hpIdn>CAN1003213</hp:hpIdn>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/f9ebd788-0e9a-4a64-89c0-20e62150a9d8</hp:uri>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#26">
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q6442880</hp:wikidataId>
+	<hp:name>Kuldeep Rai Sharma</hp:name>
+	<hp:identifier>f27acc26-8d09-44cc-ae46-632cf197afdb</hp:identifier>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2009>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2019>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">31594826</hp:hasAssets2014>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Kuldeep_Rai_Sharma</hp:wikipediaUrl>
+	<hp:hpIdn>CAN1003337</hp:hpIdn>
+	<hp:hasCurrentPosition>MP</hp:hasCurrentPosition>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10374</hp:hasLiabilities2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">80450870</hp:hasLiabilities2019>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">27</hp:edbId>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">132233012</hp:hasAssets2019>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">52</hp:age>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5409630</hp:hasAssets2009>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5034619</hp:hasLiabilities2014>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/f27acc26-8d09-44cc-ae46-632cf197afdb</hp:uri>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#27">
+	<hp:sex>M</hp:sex>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">500000</hp:hasLiabilities2014>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">28</hp:edbId>
+	<hp:hasCurrentPosition>Ex-Chief Minister</hp:hasCurrentPosition>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/B._S._Yediyurappa</hp:wikipediaUrl>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q795241</hp:wikidataId>
+	<hp:name>B.S. Yeddyurappa</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">69746267</hp:hasAssets2014>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/0e289f04-d49f-4394-8e68-bc2e23704b40</hp:uri>
+	<hp:identifier>0e289f04-d49f-4394-8e68-bc2e23704b40</hp:identifier>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:hpIdn>CAN1003384</hp:hpIdn>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">71</hp:age>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8</hp:hasCriminalcases2014>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#28">
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5508945</hp:hasLiabilities2009>
+	<hp:sex>M</hp:sex>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">29</hp:edbId>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q6744197</hp:wikidataId>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">77</hp:age>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Mallikarjun_Kharge</hp:wikipediaUrl>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2019>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">102220880</hp:hasAssets2014>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:hasCurrentPosition>Ex-Cabinet Minister</hp:hasCurrentPosition>
+	<hp:hpIdn>CAN1003572</hp:hpIdn>
+	<hp:name>Mallikarjun Kharge</hp:name>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">50646533</hp:hasAssets2009>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">157722896</hp:hasAssets2019>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/e8837e9e-be17-4e47-b5a5-f79ed1aef913</hp:uri>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3122000</hp:hasLiabilities2019>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:identifier>e8837e9e-be17-4e47-b5a5-f79ed1aef913</hp:identifier>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7410154</hp:hasLiabilities2014>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#29">
+	<hp:sex>M</hp:sex>
+	<hp:identifier>4376950b-7241-4526-9f67-3808268b1941</hp:identifier>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19386400</hp:hasAssets2009>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/4376950b-7241-4526-9f67-3808268b1941</hp:uri>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2014>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">30</hp:edbId>
+	<hp:hasCurrentPosition>CONTESTANT</hp:hasCurrentPosition>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">50</hp:age>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:name>Saleem Azeez Ahmed</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">59573517</hp:hasAssets2014>
+	<hp:hpIdn>CAN1003687</hp:hpIdn>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#30">
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2014>
+	<hp:hpIdn>CAN1003809</hp:hpIdn>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3875982</hp:hasLiabilities2014>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5582100</hp:hasAssets2009>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2061217</hp:hasLiabilities2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Bhakta_Charan_Das</hp:wikipediaUrl>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/eae84474-2dce-4a9c-8887-bf18677e4517</hp:uri>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8044387</hp:hasLiabilities2019>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">60</hp:age>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q4900848</hp:wikidataId>
+	<hp:identifier>eae84474-2dce-4a9c-8887-bf18677e4517</hp:identifier>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">16154671</hp:hasAssets2019>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2009>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">31</hp:edbId>
+	<hp:name>Bhakta Charan Das</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">11516583</hp:hasAssets2014>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:hasCriminalcases2019>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#31">
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">65</hp:age>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4049590</hp:hasLiabilities2019>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2014>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/cc5b0816-5232-4cb9-9aa4-9508ca3095d4</hp:uri>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">24271518</hp:hasAssets2009>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">229557992</hp:hasAssets2019>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">184411862</hp:hasAssets2014>
+	<hp:name>Danve Raosaheb Dadarao</hp:name>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Raosaheb_Danve</hp:wikipediaUrl>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:identifier>cc5b0816-5232-4cb9-9aa4-9508ca3095d4</hp:identifier>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q7293713</hp:wikidataId>
+	<hp:hpIdn>CAN1004156</hp:hpIdn>
+	<hp:sex>M</hp:sex>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8534130</hp:hasLiabilities2014>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">32</hp:edbId>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:hasCriminalcases2009>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:hasCriminalcases2019>
+	<hp:hasCurrentPosition>Minister of State</hp:hasCurrentPosition>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">530771</hp:hasLiabilities2009>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#32">
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hpIdn>CAN1004232</hp:hpIdn>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2019>
+	<hp:name>Nitin Jairam Gadkari</hp:name>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">62</hp:age>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19004037</hp:hasLiabilities2014>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q3504520</hp:wikidataId>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/0043a688-7de8-4769-a89d-929762c2abd1</hp:uri>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:identifier>0043a688-7de8-4769-a89d-929762c2abd1</hp:identifier>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">153704475</hp:hasAssets2014>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">187916075</hp:hasAssets2019>
+	<hp:hasCurrentPosition>Cabinet Minister</hp:hasCurrentPosition>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">33</hp:edbId>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Nitin_Gadkari</hp:wikipediaUrl>
+	<hp:sex>M</hp:sex>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">40729055</hp:hasLiabilities2019>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#33">
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:hasCriminalcases2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">54</hp:age>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">16119417</hp:hasAssets2014>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3111932</hp:hasAssets2009>
+	<hp:name>Mukul Wasnik</hp:name>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2014>
+	<hp:hpIdn>CAN1004429</hp:hpIdn>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q6933652</hp:wikidataId>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/ba0f0bc2-3a1c-479c-8abf-bf0310fbbca7</hp:uri>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">34</hp:edbId>
+	<hp:identifier>ba0f0bc2-3a1c-479c-8abf-bf0310fbbca7</hp:identifier>
+	<hp:sex>M</hp:sex>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Mukul_Wasnik</hp:wikipediaUrl>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2009>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#34">
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">36</hp:edbId>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/c16299c3-bb75-485b-890d-85b6f4d9bfc1</hp:uri>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:identifier>c16299c3-bb75-485b-890d-85b6f4d9bfc1</hp:identifier>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Rajiv_Satav</hp:wikipediaUrl>
+	<hp:name>Rajeev Shankarrao Satav</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">49681499</hp:hasAssets2014>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">584357</hp:hasLiabilities2014>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q7286246</hp:wikidataId>
 	<hp:sex>M</hp:sex>
 	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
-	<hp:identifier>e8223e48-0fc9-477e-9af8-5d233d4f6a7e</hp:identifier>
-	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
-	<hp:latestElectionResult>LOST</hp:latestElectionResult>
-	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/e8223e48-0fc9-477e-9af8-5d233d4f6a7e</hp:uri>
-	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">47044000</hp:hasAssets2014>
-	<hp:hpIdn>CAN1000564</hp:hpIdn>
-	<hp:hasCurrentPosition>Ex-Cabinet Minister</hp:hasCurrentPosition>
-	<hp:name>Syed Shahnawaz Hussain</hp:name>
-	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7472000</hp:hasAssets2009>
-	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:edbId>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
-	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">101000</hp:hasLiabilities2009>
+	<hp:hpIdn>CAN1004552</hp:hpIdn>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</hp:age>
 </rdf:Description>
 
-<rdf:Description rdf:about="neo4j://individuals#4">
+<rdf:Description rdf:about="neo4j://individuals#35">
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:name>Ashok Shankarrao Chavan</hp:name>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">60</hp:age>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</hp:edbId>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/14086828-124b-463f-9802-b65e1f8acc1c</hp:uri>
+	<hp:hasCurrentPosition>Ex-Chief Minister</hp:hasCurrentPosition>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">30625688</hp:hasLiabilities2014>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">48769129</hp:hasLiabilities2019>
 	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
-	<hp:wikidataId>http://www.wikidata.org/entity/Q59155</hp:wikidataId>
-	<hp:name>Arvind Kejriwal</hp:name>
-	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4100000</hp:hasLiabilities2014>
-	<hp:sex>M</hp:sex>
-	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/1c2b7c0f-af21-48ee-bd6e-4ce051a82fe3</hp:uri>
-	<hp:latestElectionResult>LOST</hp:latestElectionResult>
-	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45</hp:age>
-	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</hp:edbId>
 	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
-	<hp:identifier>1c2b7c0f-af21-48ee-bd6e-4ce051a82fe3</hp:identifier>
-	<hp:hasCurrentPosition>Chief Minister</hp:hasCurrentPosition>
-	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">21366668</hp:hasAssets2014>
-	<hp:hpIdn>CAN1000718</hp:hpIdn>
-	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Arvind_Kejriwal</hp:wikipediaUrl>
-	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
-	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</hp:hasCriminalcases2014>
+	<hp:hpIdn>CAN1004718</hp:hpIdn>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">500037964</hp:hasAssets2019>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">388758910</hp:hasAssets2014>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</hp:hasCriminalcases2019>
+	<hp:identifier>14086828-124b-463f-9802-b65e1f8acc1c</hp:identifier>
 </rdf:Description>
 
+<rdf:Description rdf:about="neo4j://individuals#36">
+	<hp:identifier>bc99971b-02fb-4b48-b311-41a347752aab</hp:identifier>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/bc99971b-02fb-4b48-b311-41a347752aab</hp:uri>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</hp:edbId>
+	<hp:hasCurrentPosition>MP</hp:hasCurrentPosition>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:name>Manoj Tiwari</hp:name>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">34645630</hp:hasLiabilities2014>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">199483924</hp:hasAssets2014>
+	<hp:hpIdn>CAN1004935</hp:hpIdn>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">242817031</hp:hasAssets2019>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">13618755</hp:hasLiabilities2019>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:hasCriminalcases2019>
+	<hp:sex>M</hp:sex>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">48</hp:age>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#37">
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7938378</hp:hasLiabilities2019>
+	<hp:hasCurrentPosition>MP</hp:hasCurrentPosition>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</hp:age>
+	<hp:identifier>07934393-346e-4b54-b006-0dafa4614132</hp:identifier>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</hp:edbId>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q15113996</hp:wikidataId>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/07934393-346e-4b54-b006-0dafa4614132</hp:uri>
+	<hp:name>Meenakashi Lekhi</hp:name>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">361441689</hp:hasAssets2019>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">349916470</hp:hasAssets2014>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Meenakshi_Lekhi</hp:wikipediaUrl>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:sex>F</hp:sex>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2019>
+	<hp:hpIdn>CAN1004992</hp:hpIdn>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3227562</hp:hasLiabilities2014>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#38">
+	<hp:identifier>09d0a927-c224-4908-8e48-4a81b57b5b5d</hp:identifier>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/09d0a927-c224-4908-8e48-4a81b57b5b5d</hp:uri>
+	<hp:name>Saroj Pandey</hp:name>
+	<hp:hasCurrentPosition>MP(RS)</hp:hasCurrentPosition>
+	<hp:hpIdn>CAN1005206</hp:hpIdn>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Saroj_Pandey</hp:wikipediaUrl>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q7424439</hp:wikidataId>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">804661</hp:hasLiabilities2014>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">667787</hp:hasLiabilities2009>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3200925</hp:hasAssets2014>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2009>
+	<hp:sex>F</hp:sex>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">379787</hp:hasAssets2009>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">40</hp:edbId>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">48</hp:age>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#39">
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">41</hp:edbId>
+	<hp:hpIdn>CAN1005214</hp:hpIdn>
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q16736905</hp:wikidataId>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">869000</hp:hasLiabilities2014>
+	<hp:name>Vikram Usendi</hp:name>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">23376000</hp:hasAssets2014>
+	<hp:sex>M</hp:sex>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasCriminalcases2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Vikram_Usendi</hp:wikipediaUrl>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/9e635ee0-6c41-45fa-83b8-1fc33122cb71</hp:uri>
+	<hp:identifier>9e635ee0-6c41-45fa-83b8-1fc33122cb71</hp:identifier>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">48</hp:age>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#40">
+	<hp:hasCurrentPosition>CONTESTANT</hp:hasCurrentPosition>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6979341</hp:hasLiabilities2014>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">124349901</hp:hasAssets2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/191d8c00-8000-4559-ab1b-004e6f8d274b</hp:uri>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">42</hp:edbId>
+	<hp:sex>M</hp:sex>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</hp:hasCriminalcases2014>
+	<hp:name>Ajay Kumar</hp:name>
+	<hp:hpIdn>CAN1005256</hp:hpIdn>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:identifier>191d8c00-8000-4559-ab1b-004e6f8d274b</hp:identifier>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</hp:age>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#41">
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/Laxman_Giluwa</hp:wikipediaUrl>
+	<hp:hpIdn>CAN1005358</hp:hpIdn>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">108145</hp:hasLiabilities2014>
+	<hp:hasLiabilities2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1265285</hp:hasLiabilities2019>
+	<hp:hasCurrentPosition>EX-MP</hp:hasCurrentPosition>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">43</hp:edbId>
+	<hp:hasCriminalcases2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</hp:hasCriminalcases2019>
+	<hp:sex>M</hp:sex>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">57</hp:age>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q16466511</hp:wikidataId>
+	<hp:name>Laxman Giluwa</hp:name>
+	<hp:hasAssets2019 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19516408</hp:hasAssets2019>
+	<hp:latestElectionResult>LOST</hp:latestElectionResult>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</hp:hasCriminalcases2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8094301</hp:hasAssets2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:identifier>257032fb-4ec9-4458-8d7c-e19fa30513b2</hp:identifier>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/257032fb-4ec9-4458-8d7c-e19fa30513b2</hp:uri>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://individuals#42">
+	<hp:latestElectionResult>WON</hp:latestElectionResult>
+	<hp:uri>urn:absolute://harbourpolitica/ontology/Candidate/5f6be196-14e8-4227-8bed-692b33f8d4ff</hp:uri>
+	<hp:identifier>5f6be196-14e8-4227-8bed-692b33f8d4ff</hp:identifier>
+	<hp:wikidataId>http://www.wikidata.org/entity/Q468324</hp:wikidataId>
+	<hp:hpIdn>CAN1005606</hp:hpIdn>
+	<hp:edbId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">44</hp:edbId>
+	<hp:hasAssets2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35543172</hp:hasAssets2009>
+	<hp:wikipediaUrl>https://en.wikipedia.org/wiki/L._K._Advani</hp:wikipediaUrl>
+	<hp:hasCriminalcases2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2009>
+	<hp:sex>M</hp:sex>
+	<hp:hasCurrentPosition>Ex-Leader of Opposition RS</hp:hasCurrentPosition>
+	<hp:hasCriminalcases2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</hp:hasCriminalcases2014>
+	<hp:hasLiabilities2009 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2009>
+	<hp:age rdf:datatype="http://www.w3.org/2001/XMLSchema#long">86</hp:age>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/Candidate"/>
+	<hp:hasLiabilities2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</hp:hasLiabilities2014>
+	<rdf:type rdf:resource="urn:absolute://harbourpolitica/ontology/ElectionUniverse"/>
+	<hp:hasAssets2014 rdf:datatype="http://www.w3.org/2001/XMLSchema#long">75915276</hp:hasAssets2014>
+	<hp:name>Lal Krishna Advani</hp:name>
+	<rdf:type rdf:resource="neo4j://vocabulary#owl__NamedIndividual"/>
+</rdf:Description>
 
 
 
