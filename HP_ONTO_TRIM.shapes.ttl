@@ -1,0 +1,672 @@
+# baseURI: http://www.w3.org/2002/07/owl#.shapes
+# imports: http://datashapes.org/dash
+# imports: http://www.w3.org/2002/07/owl#
+
+@prefix : <urn:absolute://harbourpolitica/ontology/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cidoccrm: <http://purl.org/NET/cidoc-crm/core#> .
+@prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix hp: <urn:absolute://harbourpolitica/ontology/> .
+@prefix hps: <urn:absolute://harbourpolitica/ontology/StoryUniverse/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wgs84pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/datatype/indianRupee>
+  a sh:NodeShape ;
+.
+dbo:AdministrativeRegion
+  a sh:NodeShape ;
+.
+dbo:Agent
+  a sh:NodeShape ;
+  sh:not [
+      rdfs:label "Instance of مكان" ;
+      sh:class dbo:Place ;
+    ] ;
+.
+dbo:Company
+  a sh:NodeShape ;
+.
+dbo:Department
+  a sh:NodeShape ;
+.
+dbo:Election
+  a sh:NodeShape ;
+.
+dbo:Event
+  a sh:NodeShape ;
+  sh:not [
+      rdfs:label "Instance of شخص" ;
+      sh:class dbo:Person ;
+    ] ;
+.
+dbo:Genre
+  a sh:NodeShape ;
+.
+dbo:GovernmentalAdministrativeRegion
+  a sh:NodeShape ;
+.
+dbo:Journalist
+  a sh:NodeShape ;
+.
+dbo:MemberOfParliament
+  a sh:NodeShape ;
+.
+dbo:Name
+  a sh:NodeShape ;
+.
+dbo:Organisation
+  a sh:NodeShape ;
+.
+dbo:Parliament
+  a sh:NodeShape ;
+.
+dbo:Person
+  a sh:NodeShape ;
+.
+dbo:Place
+  a sh:NodeShape ;
+.
+dbo:PoliticalParty
+  a sh:NodeShape ;
+.
+dbo:Politician
+  a sh:NodeShape ;
+.
+dbo:PoliticianSpouse
+  a sh:NodeShape ;
+.
+dbo:PopulatedPlace
+  a sh:NodeShape ;
+.
+dbo:Publisher
+  a sh:NodeShape ;
+.
+dbo:Region
+  a sh:NodeShape ;
+.
+dbo:SocietalEvent
+  a sh:NodeShape ;
+.
+dbo:TopicalConcept
+  a sh:NodeShape ;
+.
+<http://purl.org/vocommons/voaf#Vocabulary>
+  a sh:NodeShape ;
+.
+<http://schema.org/AdministrativeArea>
+  a sh:NodeShape ;
+.
+<http://schema.org/Event>
+  a sh:NodeShape ;
+.
+<http://schema.org/Organization>
+  a sh:NodeShape ;
+.
+<http://schema.org/Person>
+  a sh:NodeShape ;
+.
+<http://schema.org/Place>
+  a sh:NodeShape ;
+.
+<http://www.w3.org/2002/07/owl#.shapes>
+  a owl:Ontology ;
+  <http://datashapes.org/owl2shacl#createPropertyShapeURIsWithPrefixes> true ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports owl: ;
+.
+foaf:Person
+  a sh:NodeShape ;
+.
+hp:AdministrativeDivisions
+  a sh:NodeShape ;
+.
+hp:AssemblyConstituency
+  a sh:NodeShape ;
+.
+hp:CabinetMinister
+  a sh:NodeShape ;
+.
+hp:Candidate
+  a sh:NodeShape ;
+  sh:property hp:Candidate-hp_ELECTORAL_OPPONENT ;
+  sh:property hp:Candidate-hp_INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  sh:property hp:Candidate-hp_IS_CONTESTANT ;
+  sh:property hp:Candidate-hp_WON_ELECTION_FROM ;
+.
+hp:Candidate-hp_ELECTORAL_OPPONENT
+  a sh:PropertyShape ;
+  sh:path hp:ELECTORAL_OPPONENT ;
+  sh:class hp:Candidate ;
+.
+hp:Candidate-hp_INCUMBENT_MEMBER_OF_PARLIAMENT
+  a sh:PropertyShape ;
+  sh:path hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  sh:class hp:ParliamentaryConstituency ;
+.
+hp:Candidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  sh:class hp:ParliamentaryConstituency ;
+.
+hp:Candidate-hp_WON_ELECTION_FROM
+  a sh:PropertyShape ;
+  sh:path hp:WON_ELECTION_FROM ;
+  sh:class hp:Party ;
+.
+hp:ChiefMinister
+  a sh:NodeShape ;
+.
+hp:ChristianMajorityConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ChristianMajorityConstituency-hp_dominantReligion ;
+.
+hp:ChristianMajorityConstituency-hp_dominantReligion
+  a sh:PropertyShape ;
+  sh:path hp:dominantReligion ;
+  sh:datatype xsd:string ;
+  sh:hasValue "C" ;
+.
+hp:District
+  a sh:NodeShape ;
+.
+hp:DivionsIndia
+  a sh:NodeShape ;
+.
+hp:ElectionUniverse
+  a sh:NodeShape ;
+.
+hp:ElectionsIndia
+  a sh:NodeShape ;
+.
+hp:ElectoralDivisions
+  a sh:NodeShape ;
+.
+hp:GeneralCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+.
+hp:GeneralConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/ScheduledCasteConstituency" ;
+      sh:class hp:ScheduledCasteConstituency ;
+    ] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/ScheduledTribeConstituency" ;
+      sh:class hp:ScheduledTribeConstituency ;
+    ] ;
+  sh:property hp:GeneralConstituency-hp_constituencyReservationType ;
+.
+hp:GeneralConstituency-hp_constituencyReservationType
+  a sh:PropertyShape ;
+  sh:path hp:constituencyReservationType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "GENERAL" ;
+.
+hp:Governor
+  a sh:NodeShape ;
+.
+hp:HarbourPoliticaClasses
+  a sh:NodeShape ;
+  sh:property hp:HarbourPoliticaClasses-hp_HarbourPoliticaDataProperties ;
+  sh:property hp:HarbourPoliticaClasses-hp_HarbourPoliticaObjectProperties ;
+.
+hp:HarbourPoliticaClasses-hp_HarbourPoliticaDataProperties
+  a sh:PropertyShape ;
+  sh:path hp:HarbourPoliticaDataProperties ;
+.
+hp:HarbourPoliticaClasses-hp_HarbourPoliticaObjectProperties
+  a sh:PropertyShape ;
+  sh:path hp:HarbourPoliticaObjectProperties ;
+.
+hp:HarbourPoliticaConcepts
+  a sh:NodeShape ;
+.
+hp:HindiHeartland
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:HindiHeartland-hp_hindiHeartland ;
+.
+hp:HindiHeartland-hp_hindiHeartland
+  a sh:PropertyShape ;
+  sh:path hp:hindiHeartland ;
+  sh:datatype xsd:integer ;
+  sh:hasValue 1 ;
+.
+hp:HindiHeartlandCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:HindiHeartlandCandidate-hp_IS_CONTESTANT ;
+.
+hp:HindiHeartlandCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:HindiHeartlandConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:HindiHeartlandConstituencies
+  a sh:NodeShape ;
+.
+hp:HindiHeartlandConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:HindiHeartlandConstituency-hp_IS_PART_OF ;
+.
+hp:HindiHeartlandConstituency-hp_IS_PART_OF
+  a sh:PropertyShape ;
+  sh:path hp:IS_PART_OF ;
+  dash:hasValueWithClass hp:HindiHeartland ;
+  sh:minCount 1 ;
+.
+hp:HindiHeartlandMP
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:HindiHeartlandMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT ;
+.
+hp:HindiHeartlandMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT
+  a sh:PropertyShape ;
+  sh:path hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  dash:hasValueWithClass hp:HindiHeartlandConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:HinduMajorityConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:HinduMajorityConstituency-hp_dominantReligion ;
+.
+hp:HinduMajorityConstituency-hp_dominantReligion
+  a sh:PropertyShape ;
+  sh:path hp:dominantReligion ;
+  sh:datatype xsd:string ;
+  sh:hasValue "H" ;
+.
+hp:LegislatureIndia
+  a sh:NodeShape ;
+.
+hp:LinguisticDivisions
+  a sh:NodeShape ;
+.
+hp:LokSabha
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:LokSabha-hp_INCUMBENT_MEMBER_OF_PARLIAMENT ;
+.
+hp:LokSabha-hp_INCUMBENT_MEMBER_OF_PARLIAMENT
+  a sh:PropertyShape ;
+  sh:path hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:LokSabhaElection
+  a sh:NodeShape ;
+.
+hp:LokSabhaRajyaSabhaHoldings
+  a sh:NodeShape ;
+.
+hp:MinisterOfState
+  a sh:NodeShape ;
+.
+hp:MixedRelegiousConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+.
+hp:MuslimMajorityConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:MuslimMajorityConstituency-hp_dominantReligion ;
+.
+hp:MuslimMajorityConstituency-hp_dominantReligion
+  a sh:PropertyShape ;
+  sh:path hp:dominantReligion ;
+  sh:datatype xsd:string ;
+  sh:hasValue "M" ;
+.
+hp:OfficialPosition
+  a sh:NodeShape ;
+.
+hp:ParliamentOfIndia
+  a sh:NodeShape ;
+.
+hp:ParliamentaryConstituency
+  a sh:NodeShape ;
+  sh:property hp:ParliamentaryConstituency-hp_ACTIVE ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_CONTESTANT ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_CONTESTANT_PARTY ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_RUNNER ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_RUNNER_PARTY ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_WINNER ;
+  sh:property hp:ParliamentaryConstituency-hp_HAS_WINNER_PARTY ;
+.
+hp:ParliamentaryConstituency-hp_ACTIVE
+  a sh:PropertyShape ;
+  sh:path hp:ACTIVE ;
+  sh:class hp:LokSabhaElection ;
+.
+hp:ParliamentaryConstituency-hp_HAS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:HAS_CONTESTANT ;
+  sh:class hp:Candidate ;
+.
+hp:ParliamentaryConstituency-hp_HAS_CONTESTANT_PARTY
+  a sh:PropertyShape ;
+  sh:path hp:HAS_CONTESTANT_PARTY ;
+  sh:class hp:Party ;
+.
+hp:ParliamentaryConstituency-hp_HAS_RUNNER
+  a sh:PropertyShape ;
+  sh:path hp:HAS_RUNNER ;
+  sh:class hp:Candidate ;
+.
+hp:ParliamentaryConstituency-hp_HAS_RUNNER_PARTY
+  a sh:PropertyShape ;
+  sh:path hp:HAS_RUNNER_PARTY ;
+.
+hp:ParliamentaryConstituency-hp_HAS_WINNER
+  a sh:PropertyShape ;
+  sh:path hp:HAS_WINNER ;
+  sh:class hp:Candidate ;
+.
+hp:ParliamentaryConstituency-hp_HAS_WINNER_PARTY
+  a sh:PropertyShape ;
+  sh:path hp:HAS_WINNER_PARTY ;
+  sh:class hp:Party ;
+.
+hp:Party
+  a sh:NodeShape ;
+  sh:property hp:Party-hp_IS_NOMINEE_OF ;
+.
+hp:Party-hp_IS_NOMINEE_OF
+  a sh:PropertyShape ;
+  sh:path hp:IS_NOMINEE_OF ;
+  sh:class hp:Candidate ;
+.
+hp:PartyHoldings
+  a sh:NodeShape ;
+.
+hp:PoliticalDonor
+  a sh:NodeShape ;
+  sh:property hp:PoliticalDonor-hp_DONATED_TO ;
+.
+hp:PoliticalDonor-hp_DONATED_TO
+  a sh:PropertyShape ;
+  sh:path hp:DONATED_TO ;
+  sh:class hp:Party ;
+.
+hp:PresidentOfIndia
+  a sh:NodeShape ;
+.
+hp:PrimeMinsiterOfIndia
+  a sh:NodeShape ;
+.
+hp:RajyaSabha
+  a sh:NodeShape ;
+.
+hp:RuralCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:RuralCandidate-hp_IS_CONTESTANT ;
+.
+hp:RuralCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:RuralConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:RuralConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/UrbanConstituency" ;
+      sh:class hp:UrbanConstituency ;
+    ] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/UrbanRuralConstituency" ;
+      sh:class hp:UrbanRuralConstituency ;
+    ] ;
+  sh:property hp:RuralConstituency-hp_settlementType ;
+.
+hp:RuralConstituency-hp_settlementType
+  a sh:PropertyShape ;
+  sh:path hp:settlementType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "RURAL" ;
+.
+hp:ScheduledCasteCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ScheduledCasteCandidate-hp_IS_CONTESTANT ;
+.
+hp:ScheduledCasteCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:ScheduledCasteConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:ScheduledCasteConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/ScheduledTribeConstituency" ;
+      sh:class hp:ScheduledTribeConstituency ;
+    ] ;
+  sh:property hp:ScheduledCasteConstituency-hp_constituencyReservationType ;
+.
+hp:ScheduledCasteConstituency-hp_constituencyReservationType
+  a sh:PropertyShape ;
+  sh:path hp:constituencyReservationType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "SC" ;
+.
+hp:ScheduledCasteMP
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ScheduledCasteMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT ;
+.
+hp:ScheduledCasteMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT
+  a sh:PropertyShape ;
+  sh:path hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  dash:hasValueWithClass hp:ScheduledCasteConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:ScheduledTribeCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ScheduledTribeCandidate-hp_IS_CONTESTANT ;
+.
+hp:ScheduledTribeCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:ScheduledTribeConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:ScheduledTribeConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ScheduledTribeConstituency-hp_constituencyReservationType ;
+.
+hp:ScheduledTribeConstituency-hp_constituencyReservationType
+  a sh:PropertyShape ;
+  sh:path hp:constituencyReservationType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "ST" ;
+.
+hp:ScheduledTribeMP
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:ScheduledTribeMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT ;
+.
+hp:ScheduledTribeMP-hp_INCUMBENT_MEMBER_OF_PARLIAMENT
+  a sh:PropertyShape ;
+  sh:path hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+  dash:hasValueWithClass hp:ScheduledTribeConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:SikhMajorityConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:SikhMajorityConstituency-hp_dominantReligion ;
+.
+hp:SikhMajorityConstituency-hp_dominantReligion
+  a sh:PropertyShape ;
+  sh:path hp:dominantReligion ;
+  sh:datatype xsd:string ;
+  sh:hasValue "S" ;
+.
+hp:StateAndUnionTerritory
+  a sh:NodeShape ;
+.
+hp:StateLegislature
+  a sh:NodeShape ;
+.
+hp:StoryUniverse
+  a sh:NodeShape ;
+.
+hps:Story
+  a sh:NodeShape ;
+  sh:property hps:Story-hp_HAS_AUTHOR ;
+  sh:property hps:Story-hp_HAS_GENRE ;
+  sh:property hps:Story-hp_PUBLISHED_BY ;
+.
+hps:Story-hp_HAS_AUTHOR
+  a sh:PropertyShape ;
+  sh:path hp:HAS_AUTHOR ;
+  sh:class hps:StoryAuthor ;
+.
+hps:Story-hp_HAS_GENRE
+  a sh:PropertyShape ;
+  sh:path hp:HAS_GENRE ;
+  sh:class hps:StoryGenre ;
+.
+hps:Story-hp_PUBLISHED_BY
+  a sh:PropertyShape ;
+  sh:path hp:PUBLISHED_BY ;
+  sh:class hps:StoryPublisher ;
+.
+hps:StoryAuthor
+  a sh:NodeShape ;
+.
+hps:StoryEntity
+  a sh:NodeShape ;
+.
+hps:StoryGenre
+  a sh:NodeShape ;
+.
+hps:StoryPublisher
+  a sh:NodeShape ;
+.
+hp:SubDistrict
+  a sh:NodeShape ;
+.
+hp:UnionTerritory
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:UnionTerritory-hp_unionTerritory ;
+.
+hp:UnionTerritory-hp_unionTerritory
+  a sh:PropertyShape ;
+  sh:path hp:unionTerritory ;
+  sh:datatype xsd:integer ;
+  sh:hasValue 1 ;
+.
+hp:UrbanCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:UrbanCandidate-hp_IS_CONTESTANT ;
+.
+hp:UrbanCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:UrbanConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:UrbanConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:not [
+      rdfs:label "Instance of //harbourpolitica/ontology/UrbanRuralConstituency" ;
+      sh:class hp:UrbanRuralConstituency ;
+    ] ;
+  sh:property hp:UrbanConstituency-hp_settlementType ;
+.
+hp:UrbanConstituency-hp_settlementType
+  a sh:PropertyShape ;
+  sh:path hp:settlementType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "URBAN" ;
+.
+hp:UrbanRuralCandidate
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:UrbanRuralCandidate-hp_IS_CONTESTANT ;
+.
+hp:UrbanRuralCandidate-hp_IS_CONTESTANT
+  a sh:PropertyShape ;
+  sh:path hp:IS_CONTESTANT ;
+  dash:hasValueWithClass hp:UrbanRuralConstituency ;
+  sh:class hp:ParliamentaryConstituency ;
+  sh:minCount 1 ;
+.
+hp:UrbanRuralConstituency
+  a sh:NodeShape ;
+  rdfs:subClassOf [] ;
+  owl:intersectionOf [] ;
+  sh:property hp:UrbanRuralConstituency-hp_settlementType ;
+.
+hp:UrbanRuralConstituency-hp_settlementType
+  a sh:PropertyShape ;
+  sh:path hp:settlementType ;
+  sh:datatype xsd:string ;
+  sh:hasValue "URBAN RURAL" ;
+.
+hp:VidhanSabhaElection
+  a sh:NodeShape ;
+.
