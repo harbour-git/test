@@ -1,0 +1,1831 @@
+@prefix : <http://dbpedia.org/ontology/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hp: <urn:absolute://harbourpolitica/ontology/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cidoccrm: <http://purl.org/NET/cidoc-crm/core#> .
+@prefix wgs84pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .
+@base <urn:absolute://harbourpolitica/ontology/> .
+
+<urn:absolute://harbourpolitica/ontology/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://dbpedia.org/datatype/indianRupee
+<http://dbpedia.org/datatype/indianRupee> rdf:type rdfs:Datatype ;
+                                          rdfs:label "indianRupee"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+rdf:langString rdf:type rdfs:Datatype ;
+               rdfs:label "rdf:langString"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#double
+xsd:double rdf:type rdfs:Datatype ;
+           rdfs:label "xsd:double"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#float
+xsd:float rdf:type rdfs:Datatype ;
+          rdfs:label "xsd:float"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype ;
+          rdfs:label "xsd:gYear"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#integer
+xsd:integer rdf:type rdfs:Datatype ;
+            rdfs:label "xsd:integer"@en .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype ;
+           rdfs:label "xsd:string"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/MemberOfParliament
+:MemberOfParliament rdf:type owl:ObjectProperty .
+
+
+###  http://dbpedia.org/ontology/memberOfParliament
+:memberOfParliament rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dul:hasMember ;
+                    rdfs:range :Person ;
+                    rdfs:label "Abgeordnete"@de ,
+                               "Member of Parliament"@en ;
+                    prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyProperty:memberOfParliament> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember
+dul:hasMember rdf:type owl:ObjectProperty .
+
+
+###  urn:absolute://harbourpolitica/ontology/ACTIVE
+hp:ACTIVE rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+          rdfs:domain hp:ParliamentaryConstituency ;
+          rdfs:range hp:LokSabhaElection .
+
+
+###  urn:absolute://harbourpolitica/ontology/AT_TIME
+hp:AT_TIME rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/CONTAINS
+hp:CONTAINS rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/DONATED_TO
+hp:DONATED_TO rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+              rdfs:domain hp:PoliticalDonor ;
+              rdfs:range hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/ELECTORAL_OPPONENT
+hp:ELECTORAL_OPPONENT rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                      rdfs:domain hp:Candidate ;
+                      rdfs:range hp:Candidate .
+
+
+###  urn:absolute://harbourpolitica/ontology/GOOGLE_SEARCH_VOLUME
+hp:GOOGLE_SEARCH_VOLUME rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_AUTHOR
+hp:HAS_AUTHOR rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+              rdfs:domain <urn:absolute://harbourpolitica/ontology/StoryUniverse/Story> ;
+              rdfs:range <urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryAuthor> .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_CONTESTANT
+hp:HAS_CONTESTANT rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                  owl:inverseOf hp:IS_CONTESTANT ;
+                  rdfs:domain hp:ParliamentaryConstituency ;
+                  rdfs:range hp:Candidate .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_CONTESTANT_PARTY
+hp:HAS_CONTESTANT_PARTY rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                        rdfs:domain hp:ParliamentaryConstituency ;
+                        rdfs:range hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_GENRE
+hp:HAS_GENRE rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+             rdfs:domain <urn:absolute://harbourpolitica/ontology/StoryUniverse/Story> ;
+             rdfs:range <urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryGenre> .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_RUNNER
+hp:HAS_RUNNER rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+              rdfs:domain hp:ParliamentaryConstituency ;
+              rdfs:range hp:Candidate .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_RUNNER_PARTY
+hp:HAS_RUNNER_PARTY rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                    rdfs:domain hp:ParliamentaryConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_WINNER
+hp:HAS_WINNER rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+              rdfs:domain hp:ParliamentaryConstituency ;
+              rdfs:range hp:Candidate .
+
+
+###  urn:absolute://harbourpolitica/ontology/HAS_WINNER_PARTY
+hp:HAS_WINNER_PARTY rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                    rdfs:domain hp:ParliamentaryConstituency ;
+                    rdfs:range hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/HarbourPoliticaObjectProperties
+hp:HarbourPoliticaObjectProperties rdf:type owl:ObjectProperty ;
+                                   rdfs:domain hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/INCUMBENT_MEMBER_OF_PARLIAMENT
+hp:INCUMBENT_MEMBER_OF_PARLIAMENT rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                                  rdfs:domain hp:Candidate ;
+                                  rdfs:range hp:ParliamentaryConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/IS_CONTESTANT
+hp:IS_CONTESTANT rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                 rdfs:domain hp:Candidate ;
+                 rdfs:range hp:ParliamentaryConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/IS_HELD_BY
+hp:IS_HELD_BY rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/IS_NOMINEE_OF
+hp:IS_NOMINEE_OF rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                 rdfs:domain hp:Party ;
+                 rdfs:range hp:Candidate .
+
+
+###  urn:absolute://harbourpolitica/ontology/IS_PART_OF
+hp:IS_PART_OF rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/IS_SIMILAR_TO
+hp:IS_SIMILAR_TO rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/PUBLISHED_BY
+hp:PUBLISHED_BY rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                rdfs:domain <urn:absolute://harbourpolitica/ontology/StoryUniverse/Story> ;
+                rdfs:range <urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryPublisher> .
+
+
+###  urn:absolute://harbourpolitica/ontology/SAME_AS
+hp:SAME_AS rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/WIKIPAGEVIEWS_VOLUME
+hp:WIKIPAGEVIEWS_VOLUME rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/WON_ELECTION_FROM
+hp:WON_ELECTION_FROM rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf hp:HarbourPoliticaObjectProperties ;
+                     rdfs:domain hp:Candidate ;
+                     rdfs:range hp:Party .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/Name
+:Name rdf:type owl:DatatypeProperty .
+
+
+###  http://dbpedia.org/ontology/name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range rdf:langString ;
+      rdfs:label "Name"@de ,
+                 "name"@en ;
+      prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyProperty:name> .
+
+
+###  urn:absolute://harbourpolitica/ontology/HarbourPoliticaDataProperties
+hp:HarbourPoliticaDataProperties rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/abreviation
+hp:abreviation rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+               rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/abreviationAlias
+hp:abreviationAlias rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                    rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/address
+hp:address rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+           rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/age
+hp:age rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+       rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/body
+hp:body rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+        rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/careOf
+hp:careOf rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/category
+hp:category rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+            rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/censusCode
+hp:censusCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+              rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/constituencyReservationType
+hp:constituencyReservationType rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                               rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/contributionAmount
+hp:contributionAmount rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                      rdfs:range <http://dbpedia.org/datatype/indianRupee> .
+
+
+###  urn:absolute://harbourpolitica/ontology/contributionMode
+hp:contributionMode rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                    rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/cosineSimilarity
+hp:cosineSimilarity rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/createdDate
+hp:createdDate rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/dateString
+hp:dateString rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/districtCensusCode
+hp:districtCensusCode rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                      rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/dob
+hp:dob rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/dominantReligion
+hp:dominantReligion rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                    rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/edbId
+hp:edbId rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+         rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/education
+hp:education rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/electors
+hp:electors rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+            rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/endYear
+hp:endYear rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+           rdfs:range xsd:gYear .
+
+
+###  urn:absolute://harbourpolitica/ontology/enop
+hp:enop rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+        rdfs:range xsd:float .
+
+
+###  urn:absolute://harbourpolitica/ontology/entityType
+hp:entityType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+              rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/financialYear
+hp:financialYear rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                 rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/geometry
+hp:geometry rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/geometryType
+hp:geometryType rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasAssets
+hp:hasAssets rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+             rdfs:range <http://dbpedia.org/datatype/indianRupee> .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasAssets2009
+hp:hasAssets2009 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:hasAssets .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasAssets2014
+hp:hasAssets2014 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:hasAssets .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasAssets2019
+hp:hasAssets2019 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:hasAssets .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasCriminalcases
+hp:hasCriminalcases rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                    rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasCriminalcases2009
+hp:hasCriminalcases2009 rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf hp:hasCriminalcases .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasCriminalcases2014
+hp:hasCriminalcases2014 rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf hp:hasCriminalcases .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasCriminalcases2019
+hp:hasCriminalcases2019 rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf hp:hasCriminalcases .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasCurrentPosition
+hp:hasCurrentPosition rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                      rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasLiabilities
+hp:hasLiabilities rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                  rdfs:range <http://dbpedia.org/datatype/indianRupee> .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasLiabilities2009
+hp:hasLiabilities2009 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:hasLiabilities .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasLiabilities2014
+hp:hasLiabilities2014 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:hasLiabilities .
+
+
+###  urn:absolute://harbourpolitica/ontology/hasLiabilities2019
+hp:hasLiabilities2019 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:hasLiabilities .
+
+
+###  urn:absolute://harbourpolitica/ontology/highestDegree
+hp:highestDegree rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/hindiHeartland
+hp:hindiHeartland rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                  rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/hpIdn
+hp:hpIdn rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+         rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/identifier
+hp:identifier rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/iou
+hp:iou rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/latestElectionResult
+hp:latestElectionResult rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                        rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/literacyRate
+hp:literacyRate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                rdfs:range xsd:float .
+
+
+###  urn:absolute://harbourpolitica/ontology/location
+hp:location rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/lokSabhaEletionId
+hp:lokSabhaEletionId rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                     rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/modifiedDate
+hp:modifiedDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/name
+hp:name rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+        rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/nameAlias
+hp:nameAlias rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+             rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/nameAsVoterIn
+hp:nameAsVoterIn rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/notaPercentage
+hp:notaPercentage rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/notaRank
+hp:notaRank rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/notaVotes
+hp:notaVotes rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/panGiven
+hp:panGiven rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+            rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/parliamentaryConstituency
+hp:parliamentaryConstituency rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                             rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/partyAbreviation
+hp:partyAbreviation rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                    rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/partyHoldingsLevel
+hp:partyHoldingsLevel rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/pcId
+hp:pcId rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/pcName
+hp:pcName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/percentageTurnout
+hp:percentageTurnout rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                     rdfs:range xsd:float .
+
+
+###  urn:absolute://harbourpolitica/ontology/pincode
+hp:pincode rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/portfolio
+hp:portfolio rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+             rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/position
+hp:position rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+            rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/rank
+hp:rank rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+        rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/region
+hp:region rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+          rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/salience
+hp:salience rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/selfProfession
+hp:selfProfession rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/settlementType
+hp:settlementType rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                  rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/sex
+hp:sex rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+       rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/spouseProfession
+hp:spouseProfession rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf hp:HarbourPoliticaDataProperties .
+
+
+###  urn:absolute://harbourpolitica/ontology/startYear
+hp:startYear rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+             rdfs:range xsd:gYear .
+
+
+###  urn:absolute://harbourpolitica/ontology/status
+hp:status rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+          rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/totalVotes
+hp:totalVotes rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+              rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/unionTerritory
+hp:unionTerritory rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                  rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/uri
+hp:uri rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+       rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/vector
+hp:vector rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+          rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/votes
+hp:votes rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+         rdfs:range xsd:integer .
+
+
+###  urn:absolute://harbourpolitica/ontology/wikidataId
+hp:wikidataId rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+              rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/wikipediaUrl
+hp:wikipediaUrl rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+                rdfs:range xsd:string .
+
+
+###  urn:absolute://harbourpolitica/ontology/year
+hp:year rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+        rdfs:range xsd:gYear .
+
+
+###  urn:absolute://harbourpolitica/ontology/yearActive
+hp:yearActive rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf hp:HarbourPoliticaDataProperties ;
+              rdfs:range xsd:gYear .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/AdministrativeRegion
+:AdministrativeRegion rdf:type owl:Class ;
+                      owl:equivalentClass <http://schema.org/AdministrativeArea> ;
+                      rdfs:subClassOf :Region ;
+                      rdfs:comment "A PopulatedPlace under the jurisdiction of an administrative body. This body may administer either a whole region or one or more adjacent Settlements (town administration)"@en ;
+                      rdfs:label "Verwaltungsregion"@de ,
+                                 "administrative region"@en ,
+                                 "bestuurlijk gebied"@nl ,
+                                 "regione amministrativa"@it ,
+                                 "rexión administrativa"@gl ,
+                                 "région administrative"@fr ,
+                                 "réigiún riaracháin"@ga ,
+                                 "διοικητική περιφέρεια"@el ,
+                                 "行政区画"@ja ,
+                                 "行政區"@zh ,
+                                 "관리 지역"@ko ;
+                      prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:AdministrativeRegion> .
+
+
+###  http://dbpedia.org/ontology/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf owl:Thing ;
+       owl:disjointWith :Place ;
+       rdfs:comment "Analogous to a foaf:Agent, an agent is an entity that acts. This is intended to be the super class of Person and Organisation."@en ,
+                    "Análogo a foaf:Agent, un axente é unha entidade que actúa. Destínase a ser a super clase de Persoa e Organización."@gl ,
+                    "Ανάλογα με την κλάση foaf:Agent, ένας πράκτορας είναι μια οντότητα που ενεργεί. Αυτό προορίζεται να είναι μια υπερκλάση της κλάσης Άτόμο και Οργανισμός."@el ;
+       rdfs:label "Agent"@de ,
+                  "agent"@en ,
+                  "agent"@fr ,
+                  "agent"@nl ,
+                  "agente"@es ,
+                  "agente"@it ,
+                  "axente"@gl ,
+                  "gníomhaire"@ga ,
+                  "πράκτορας"@el ,
+                  "エージェント"@ja ,
+                  "에이전트"@ko ;
+       prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Agent> .
+
+
+###  http://dbpedia.org/ontology/Company
+:Company rdf:type owl:Class ;
+         rdfs:subClassOf :Organisation ;
+         rdfs:label "Unternehmen"@de ,
+                    "bedrijf"@nl ,
+                    "comhlacht"@ga ,
+                    "company"@en ,
+                    "empresa"@es ,
+                    "empresa"@pt ,
+                    "entreprise"@fr ,
+                    "εταιρία"@el ,
+                    "会社"@ja ,
+                    "회사"@ko ;
+         prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Company> .
+
+
+###  http://dbpedia.org/ontology/Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf :GovernmentalAdministrativeRegion ;
+            rdfs:label "Distrikt"@de ,
+                       "Distrito"@es ,
+                       "departement"@nl ,
+                       "department"@en ,
+                       "département"@fr ,
+                       "roinn"@ga ,
+                       "τμήμα"@el ,
+                       "부서"@ko ;
+            prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Department> .
+
+
+###  http://dbpedia.org/ontology/Election
+:Election rdf:type owl:Class ;
+          rdfs:subClassOf :SocietalEvent ;
+          rdfs:label "Election"@en ,
+                     "Wahl"@de ,
+                     "elección"@es ,
+                     "elezione"@it ,
+                     "toghchán"@ga ,
+                     "verkiezing"@nl ,
+                     "élection"@fr ,
+                     "εκλογή"@el ,
+                     "選挙"@ja ,
+                     "선거"@ko ;
+          prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Election> .
+
+
+###  http://dbpedia.org/ontology/Event
+:Event rdf:type owl:Class ;
+       owl:equivalentClass <http://schema.org/Event> ;
+       rdfs:subClassOf owl:Thing ;
+       owl:disjointWith :Person ;
+       rdfs:label "Ereignis"@de ,
+                  "event"@en ,
+                  "evento"@pt ,
+                  "gebeurtenis"@nl ,
+                  "évènement"@fr ,
+                  "ócáid"@ga ,
+                  "γεγονός"@el ,
+                  "イベント"@ja ,
+                  "사건"@ko ;
+       prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Event> .
+
+
+###  http://dbpedia.org/ontology/Genre
+:Genre rdf:type owl:Class ;
+       rdfs:subClassOf :TopicalConcept ;
+       rdfs:label "Genre"@de ,
+                  "genre"@en ,
+                  "genre"@nl ,
+                  "género"@es ,
+                  "seánra"@ga ,
+                  "ύφος"@el ,
+                  "ジャンル"@ja ;
+       prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Genre> .
+
+
+###  http://dbpedia.org/ontology/GovernmentalAdministrativeRegion
+:GovernmentalAdministrativeRegion rdf:type owl:Class ;
+                                  rdfs:subClassOf :AdministrativeRegion ;
+                                  rdfs:comment "An administrative body governing some territorial unity, in this case a governmental administrative body"@en ;
+                                  rdfs:label "gebied onder overheidsbestuur"@nl ,
+                                             "governmental administrative region"@en ,
+                                             "région administrative d'état"@fr ,
+                                             "staatliche Verwaltungsregion"@de ;
+                                  prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:GovernmentalAdministrativeRegion> .
+
+
+###  http://dbpedia.org/ontology/Journalist
+:Journalist rdf:type owl:Class ;
+            rdfs:subClassOf :Person ;
+            rdfs:label "Journalist"@de ,
+                       "giornalista"@it ,
+                       "iriseoir"@ga ,
+                       "journalist"@en ,
+                       "journalist"@nl ,
+                       "journaliste"@fr ,
+                       "periodista"@es ,
+                       "δημοσιογράφος"@el ,
+                       "ジャーナリスト"@ja ;
+            prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Journalist> .
+
+
+###  http://dbpedia.org/ontology/MemberOfParliament
+:MemberOfParliament rdf:type owl:Class ;
+                    rdfs:subClassOf :Politician .
+
+
+###  http://dbpedia.org/ontology/Name
+:Name rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+
+###  http://dbpedia.org/ontology/Organisation
+:Organisation rdf:type owl:Class ;
+              owl:equivalentClass <http://schema.org/Organization> ;
+              rdfs:subClassOf :Agent ;
+              rdfs:label "Organisation"@de ,
+                         "organisatie"@nl ,
+                         "organisation"@en ,
+                         "organisation"@fr ,
+                         "organizacija"@sl ,
+                         "organización"@es ,
+                         "organização"@pt ,
+                         "οργάνωση"@el ,
+                         "Организация"@ru ,
+                         "組織"@ja ,
+                         "조직"@ko ;
+              prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Organisation> .
+
+
+###  http://dbpedia.org/ontology/Parliament
+:Parliament rdf:type owl:Class ;
+            rdfs:subClassOf :Organisation ;
+            rdfs:label "Parlament"@de ,
+                       "parlaimint"@ga ,
+                       "parlamento"@es ,
+                       "parlement"@fr ,
+                       "parlement"@nl ,
+                       "parliament"@en ,
+                       "κοινοβούλιο"@el ,
+                       "議会"@ja ;
+            prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Parliament> .
+
+
+###  http://dbpedia.org/ontology/Person
+:Person rdf:type owl:Class ;
+        owl:equivalentClass <http://schema.org/Person> ,
+                            foaf:Person ;
+        rdfs:subClassOf :Agent ;
+        rdfs:label "Oseba"@sl ,
+                   "Person"@de ,
+                   "duine"@ga ,
+                   "osoba"@pl ,
+                   "person"@en ,
+                   "persona"@es ,
+                   "persona"@it ,
+                   "personne"@fr ,
+                   "persoon"@nl ,
+                   "pertsona"@eu ,
+                   "pessoa"@pt ,
+                   "Πληροφορίες προσώπου"@el ,
+                   "անձ"@hy ,
+                   "شخص"@ar ,
+                   "人_(法律)"@ja ;
+        prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Person> .
+
+
+###  http://dbpedia.org/ontology/Place
+:Place rdf:type owl:Class ;
+       owl:equivalentClass <http://schema.org/Place> ;
+       rdfs:subClassOf owl:Thing ;
+       rdfs:comment "Immobile things or locations."@en ,
+                    "uma localização"@pt ;
+       rdfs:label "Ort"@de ,
+                  "lekua"@eu ,
+                  "lieu"@fr ,
+                  "lloc"@ca ,
+                  "lugar"@es ,
+                  "lugar"@pt ,
+                  "miejsce"@pl ,
+                  "plaats"@nl ,
+                  "place"@en ,
+                  "áit"@ga ,
+                  "περιοχή"@el ,
+                  "مكان"@ar ,
+                  "立地"@ja ;
+       prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Place> .
+
+
+###  http://dbpedia.org/ontology/PoliticalParty
+:PoliticalParty rdf:type owl:Class ;
+                rdfs:subClassOf :Organisation ;
+                rdfs:comment "for example: Democratic_Party_(United_States)"@en ,
+                             "για παράδειγμα: Δημοκρατικό Κόμμα _United_States)"@el ;
+                rdfs:label "parti politique"@fr ,
+                           "partia polityczna"@pl ,
+                           "partido político"@es ,
+                           "partido político"@pt ,
+                           "partit polític"@ca ,
+                           "political party"@en ,
+                           "politieke partij"@nl ,
+                           "politische Partei"@de ,
+                           "πολιτικό κόμμα"@el ;
+                prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:PoliticalParty> .
+
+
+###  http://dbpedia.org/ontology/Politician
+:Politician rdf:type owl:Class ;
+            rdfs:subClassOf :Person ;
+            rdfs:label "Politiker"@de ,
+                       "polaiteoir"@ga ,
+                       "politician"@en ,
+                       "politicien"@fr ,
+                       "politicus"@nl ,
+                       "politik"@sl ,
+                       "político"@pt ,
+                       "πολιτικός"@el ,
+                       "政治家"@ja ,
+                       "정치인"@ko ;
+            prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Politician> .
+
+
+###  http://dbpedia.org/ontology/PoliticianSpouse
+:PoliticianSpouse rdf:type owl:Class ;
+                  rdfs:subClassOf :Person ;
+                  rdfs:label "Ehepartner eines Politiker"@de ,
+                             "politician spouse"@en ,
+                             "σύζυγος πολιτικού"@el ;
+                  prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:PoliticianSpouse> .
+
+
+###  http://dbpedia.org/ontology/PopulatedPlace
+:PopulatedPlace rdf:type owl:Class ;
+                rdfs:subClassOf :Place ;
+                rdfs:comment "As defined by the United States Geological Survey, a populated place is a place or area with clustered or scattered buildings and a permanent human population (city, settlement, town, or village) referenced with geographic coordinates (http://en.wikipedia.org/wiki/Populated_place)."@en ,
+                             "Πυκνοκατοικημένη περιοχή, είναι η περιοχή ή το μέρος με μεγάλο αριθμό κτιρίων και μεγάλο μόνιμο πληθυσμό, σε σύγκριση με την γεωγραφική περιοχή που καταλαμβάνει (μεγαλούπολη, πόλη ή χωριό)."@el ;
+                rdfs:label "bebouwde omgeving"@nl ,
+                           "bewohnter Ort"@de ,
+                           "lieu habité"@fr ,
+                           "populated place"@en ,
+                           "πυκνοκατοικημένη περιοχή"@el ,
+                           "تجمع سكاني"@ar ;
+                prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:PopulatedPlace> .
+
+
+###  http://dbpedia.org/ontology/Publisher
+:Publisher rdf:type owl:Class ;
+           rdfs:subClassOf :Company ;
+           rdfs:comment "Publishing company"@en ;
+           rdfs:label "Herausgeber"@de ,
+                      "editor"@es ,
+                      "foilsitheoir"@ga ,
+                      "publisher"@en ,
+                      "uitgever"@nl ,
+                      "éditeur"@fr ,
+                      "εκδότης"@el ,
+                      "出版社"@ja ,
+                      "출판사"@ko ;
+           prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Publisher> .
+
+
+###  http://dbpedia.org/ontology/Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :PopulatedPlace ;
+        rdfs:label "Region"@de ,
+                   "regio"@nl ,
+                   "region"@en ,
+                   "région"@fr ,
+                   "réigiún"@ga ,
+                   "περιοχή"@el ,
+                   "地域"@ja ;
+        prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Region> .
+
+
+###  http://dbpedia.org/ontology/SocietalEvent
+:SocietalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "an event that is clearly different from strictly personal events"@en ;
+               rdfs:label "gesellschatliches Ereignis"@de ,
+                          "maatschappelijke gebeurtenis"@nl ,
+                          "societal event"@en ,
+                          "évènement collectif"@fr ;
+               prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:SocietalEvent> .
+
+
+###  http://dbpedia.org/ontology/TopicalConcept
+:TopicalConcept rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "coincheap i mbéal an phobail"@ga ,
+                           "thematisches Konzept"@de ,
+                           "topical concept"@en ;
+                prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:TopicalConcept> .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:Class .
+
+
+###  http://schema.org/Event
+<http://schema.org/Event> rdf:type owl:Class .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+###  urn:absolute://harbourpolitica/ontology/AdministrativeDivisions
+hp:AdministrativeDivisions rdf:type owl:Class ;
+                           rdfs:subClassOf hp:DivionsIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/AssemblyConstituency
+hp:AssemblyConstituency rdf:type owl:Class ;
+                        rdfs:subClassOf hp:ElectoralDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/CabinetMinister
+hp:CabinetMinister rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty hp:position ;
+                                                                owl:hasValue "Cabinet Minister"
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/Candidate
+hp:Candidate rdf:type owl:Class ;
+             rdfs:subClassOf :Person ,
+                             hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/ChiefMinister
+hp:ChiefMinister rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty hp:position ;
+                                                              owl:hasValue "Chief Minister"
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/ChristianMajorityConstituency
+hp:ChristianMajorityConstituency rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty hp:dominantReligion ;
+                                                                              owl:hasValue "C"
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/District
+hp:District rdf:type owl:Class ;
+            rdfs:subClassOf hp:AdministrativeDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/DivionsIndia
+hp:DivionsIndia rdf:type owl:Class ;
+                rdfs:subClassOf :Region ,
+                                hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/ElectionUniverse
+hp:ElectionUniverse rdf:type owl:Class ;
+                    rdfs:subClassOf hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/ElectionsIndia
+hp:ElectionsIndia rdf:type owl:Class ;
+                  rdfs:subClassOf :Election ,
+                                  hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/ElectoralDivisions
+hp:ElectoralDivisions rdf:type owl:Class ;
+                      rdfs:subClassOf hp:DivionsIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/GeneralCandidate
+hp:GeneralCandidate rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf [ rdf:type owl:Class ;
+                                                                                    owl:unionOf ( hp:ScheduledCasteCandidate
+                                                                                                  hp:ScheduledTribeCandidate
+                                                                                                )
+                                                                                  ]
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/GeneralConstituency
+hp:GeneralConstituency rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty hp:constituencyReservationType ;
+                                                                    owl:hasValue "GENERAL"
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf hp:HarbourPoliticaConcepts ;
+                       owl:disjointWith hp:ScheduledCasteConstituency ,
+                                        hp:ScheduledTribeConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/GoogleTrendUniverseEntity
+hp:GoogleTrendUniverseEntity rdf:type owl:Class ;
+                             rdfs:subClassOf hp:TrendUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/Governor
+hp:Governor rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty hp:position ;
+                                                         owl:hasValue "Governor"
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/HarbourPoliticaClasses
+hp:HarbourPoliticaClasses rdf:type owl:Class .
+
+
+###  urn:absolute://harbourpolitica/ontology/HarbourPoliticaConcepts
+hp:HarbourPoliticaConcepts rdf:type owl:Class ;
+                           rdfs:subClassOf hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/HindiHeartland
+hp:HindiHeartland rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( hp:StateAndUnionTerritory
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty hp:hindiHeartland ;
+                                                               owl:hasValue 1
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf hp:LinguisticDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/HindiHeartlandCandidate
+hp:HindiHeartlandCandidate rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty hp:IS_CONTESTANT ;
+                                                                        owl:someValuesFrom hp:HindiHeartlandConstituency
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/HindiHeartlandConstituency
+hp:HindiHeartlandConstituency rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty hp:IS_PART_OF ;
+                                                                           owl:someValuesFrom hp:HindiHeartland
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/HindiHeartlandMP
+hp:HindiHeartlandMP rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+                                                                 owl:someValuesFrom hp:HindiHeartlandConstituency
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf hp:HarbourPoliticaConcepts ,
+                                    hp:LokSabha .
+
+
+###  urn:absolute://harbourpolitica/ontology/HinduMajorityConstituency
+hp:HinduMajorityConstituency rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty hp:dominantReligion ;
+                                                                          owl:hasValue "H"
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/LegislatureIndia
+hp:LegislatureIndia rdf:type owl:Class ;
+                    rdfs:subClassOf :Parliament ,
+                                    hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/LinguisticDivisions
+hp:LinguisticDivisions rdf:type owl:Class ;
+                       rdfs:subClassOf hp:DivionsIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/LokSabha
+hp:LokSabha rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+                                                         owl:someValuesFrom hp:ParliamentaryConstituency
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf hp:ParliamentOfIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/LokSabhaElection
+hp:LokSabhaElection rdf:type owl:Class ;
+                    rdfs:subClassOf hp:ElectionsIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/LokSabhaRajyaSabhaHoldings
+hp:LokSabhaRajyaSabhaHoldings rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                                         [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Deputy Prime Minister"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Deputy Speaker LS"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Leader of House RS"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Leader of Opposition LS"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Leader of Opposition RS"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Speaker of the House LS"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:position ;
+                                                                                           owl:hasValue "Vice President"
+                                                                                         ]
+                                                                                       )
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/MinisterOfState
+hp:MinisterOfState rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                              [ rdf:type owl:Class ;
+                                                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty hp:position ;
+                                                                                owl:hasValue "Minister of State"
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty hp:position ;
+                                                                                owl:hasValue "Minister of State (Independent Charge)"
+                                                                              ]
+                                                                            )
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/MixedRelegiousConstituency
+hp:MixedRelegiousConstituency rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                         [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:dominantReligion ;
+                                                                                           owl:hasValue "H*"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:dominantReligion ;
+                                                                                           owl:hasValue "HB"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:dominantReligion ;
+                                                                                           owl:hasValue "HC"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:dominantReligion ;
+                                                                                           owl:hasValue "HM"
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty hp:dominantReligion ;
+                                                                                           owl:hasValue "HS"
+                                                                                         ]
+                                                                                       )
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/MuslimMajorityConstituency
+hp:MuslimMajorityConstituency rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty hp:dominantReligion ;
+                                                                           owl:hasValue "M"
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/NationalParty
+hp:NationalParty rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( hp:Party
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty hp:status ;
+                                                              owl:hasValue "NATIONAL"
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/NonRecognizedParty
+hp:NonRecognizedParty rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( hp:Party
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty hp:status ;
+                                                                   owl:hasValue "NON RECOGNIZED"
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/OfficialPosition
+hp:OfficialPosition rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty hp:position ;
+                                                                 owl:hasValue "President"
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/ParliamentOfIndia
+hp:ParliamentOfIndia rdf:type owl:Class ;
+                     rdfs:subClassOf hp:LegislatureIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/ParliamentaryConstituency
+hp:ParliamentaryConstituency rdf:type owl:Class ;
+                             rdfs:subClassOf hp:ElectoralDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/Party
+hp:Party rdf:type owl:Class ;
+         rdfs:subClassOf :PoliticalParty ,
+                         hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/PartyHoldings
+hp:PartyHoldings rdf:type owl:Class ;
+                 rdfs:subClassOf hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/PoliticalDonor
+hp:PoliticalDonor rdf:type owl:Class ;
+                  rdfs:subClassOf hp:ElectionUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/PresidentOfIndia
+hp:PresidentOfIndia rdf:type owl:Class ;
+                    rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/PrimeMinsiterOfIndia
+hp:PrimeMinsiterOfIndia rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( hp:OfficialPosition
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty hp:position ;
+                                                                     owl:hasValue "Prime Minister"
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf hp:OfficialPosition .
+
+
+###  urn:absolute://harbourpolitica/ontology/RajyaSabha
+hp:RajyaSabha rdf:type owl:Class ;
+              rdfs:subClassOf hp:ParliamentOfIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/RegionalParty
+hp:RegionalParty rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( hp:Party
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty hp:status ;
+                                                              owl:hasValue "REGIONAL"
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf hp:Party .
+
+
+###  urn:absolute://harbourpolitica/ontology/RuralCandidate
+hp:RuralCandidate rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty hp:IS_CONTESTANT ;
+                                                               owl:someValuesFrom hp:RuralConstituency
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/RuralConstituency
+hp:RuralConstituency rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty hp:settlementType ;
+                                                                  owl:hasValue "RURAL"
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf hp:HarbourPoliticaConcepts ;
+                     owl:disjointWith hp:UrbanConstituency ,
+                                      hp:UrbanRuralConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledCasteCandidate
+hp:ScheduledCasteCandidate rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty hp:IS_CONTESTANT ;
+                                                                        owl:someValuesFrom hp:ScheduledCasteConstituency
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledCasteConstituency
+hp:ScheduledCasteConstituency rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty hp:constituencyReservationType ;
+                                                                           owl:hasValue "SC"
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:HarbourPoliticaConcepts ;
+                              owl:disjointWith hp:ScheduledTribeConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledCasteMP
+hp:ScheduledCasteMP rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+                                                                 owl:someValuesFrom hp:ScheduledCasteConstituency
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf hp:HarbourPoliticaConcepts ,
+                                    hp:LokSabha .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledTribeCandidate
+hp:ScheduledTribeCandidate rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty hp:IS_CONTESTANT ;
+                                                                        owl:someValuesFrom hp:ScheduledTribeConstituency
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledTribeConstituency
+hp:ScheduledTribeConstituency rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty hp:constituencyReservationType ;
+                                                                           owl:hasValue "ST"
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/ScheduledTribeMP
+hp:ScheduledTribeMP rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty hp:INCUMBENT_MEMBER_OF_PARLIAMENT ;
+                                                                 owl:someValuesFrom hp:ScheduledTribeConstituency
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf hp:HarbourPoliticaConcepts ,
+                                    hp:LokSabha .
+
+
+###  urn:absolute://harbourpolitica/ontology/SikhMajorityConstituency
+hp:SikhMajorityConstituency rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty hp:dominantReligion ;
+                                                                         owl:hasValue "S"
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/StateAndUnionTerritory
+hp:StateAndUnionTerritory rdf:type owl:Class ;
+                          rdfs:subClassOf hp:AdministrativeDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/StateLegislature
+hp:StateLegislature rdf:type owl:Class ;
+                    rdfs:subClassOf hp:LegislatureIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse
+hp:StoryUniverse rdf:type owl:Class ;
+                 rdfs:subClassOf hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/SubDistrict
+hp:SubDistrict rdf:type owl:Class ;
+               rdfs:subClassOf hp:AdministrativeDivisions .
+
+
+###  urn:absolute://harbourpolitica/ontology/TrendUniverse
+hp:TrendUniverse rdf:type owl:Class ;
+                 rdfs:subClassOf hp:HarbourPoliticaClasses .
+
+
+###  urn:absolute://harbourpolitica/ontology/TwitterUniverseEntity
+hp:TwitterUniverseEntity rdf:type owl:Class ;
+                         rdfs:subClassOf hp:TrendUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/UnionTerritory
+hp:UnionTerritory rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( hp:StateAndUnionTerritory
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty hp:unionTerritory ;
+                                                               owl:hasValue 1
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf hp:StateAndUnionTerritory .
+
+
+###  urn:absolute://harbourpolitica/ontology/UrbanCandidate
+hp:UrbanCandidate rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty hp:IS_CONTESTANT ;
+                                                               owl:someValuesFrom hp:UrbanConstituency
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/UrbanConstituency
+hp:UrbanConstituency rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty hp:settlementType ;
+                                                                  owl:hasValue "URBAN"
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf hp:HarbourPoliticaConcepts ;
+                     owl:disjointWith hp:UrbanRuralConstituency .
+
+
+###  urn:absolute://harbourpolitica/ontology/UrbanRuralCandidate
+hp:UrbanRuralCandidate rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( hp:Candidate
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty hp:IS_CONTESTANT ;
+                                                                    owl:someValuesFrom hp:UrbanRuralConstituency
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/UrbanRuralConstituency
+hp:UrbanRuralConstituency rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( hp:ParliamentaryConstituency
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty hp:settlementType ;
+                                                                       owl:hasValue "URBAN RURAL"
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                          rdfs:subClassOf hp:HarbourPoliticaConcepts .
+
+
+###  urn:absolute://harbourpolitica/ontology/VidhanSabhaElection
+hp:VidhanSabhaElection rdf:type owl:Class ;
+                       rdfs:subClassOf hp:ElectionsIndia .
+
+
+###  urn:absolute://harbourpolitica/ontology/WikipageviewUniverseEntity
+hp:WikipageviewUniverseEntity rdf:type owl:Class ;
+                              rdfs:subClassOf hp:TrendUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse/Story
+<urn:absolute://harbourpolitica/ontology/StoryUniverse/Story> rdf:type owl:Class ;
+                                                              rdfs:subClassOf hp:StoryUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryAuthor
+<urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryAuthor> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :Journalist ,
+                                                                                    hp:StoryUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryEntity
+<urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryEntity> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf hp:StoryUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryGenre
+<urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryGenre> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :Genre ,
+                                                                                   hp:StoryUniverse .
+
+
+###  urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryPublisher
+<urn:absolute://harbourpolitica/ontology/StoryUniverse/StoryPublisher> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf :Publisher ,
+                                                                                       hp:StoryUniverse .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/ontology/
+: rdf:type owl:NamedIndividual ,
+           <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:MemberOfParliament rdfs:label "member of parliament"@en ;
+                    prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:MemberOfParliament> ;
+                    rdfs:label "parlementslid"@nl ,
+                               "membre du Parlement"@fr ,
+                               "Parlamentsmitglied"@de ,
+                               "Μέλος κοινοβουλίου"@el ,
+                               "membro do parlamento"@pt .
+
+
+:Name prov:wasDerivedFrom <http://mappings.dbpedia.org/index.php/OntologyClass:Name> ;
+      rdfs:label "Name"@de ,
+                 "名前"@ja ,
+                 "nom"@fr ,
+                 "όνομα"@el ,
+                 "naam"@nl ,
+                 "name"@en ,
+                 "nome"@pt ,
+                 "nazwa"@pl ,
+                 "ainm"@ga .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
