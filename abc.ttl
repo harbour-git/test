@@ -1,0 +1,11 @@
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/candidate> "RANA BAHADUR SINGH" .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/name> "RANA BAHADUR SINGH LS06" .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/lsId> "LS06" .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/candidateId> "CAN1134314" .
+<neo4j://individuals#105509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://harbourpolitica/ontology/CandidateLokSabha> .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/sex> "M" .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/uri> "urn:absolute://harbourpolitica/ontology/CandidateLokSabhaElections/a95c4e4d-5cb7-44f1-b072-81f321d24fb1" .
+<neo4j://individuals#105509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://harbourpolitica/ontology/ElectionUniverse> .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/HarbourPoliticaDataProperties> "CAN1134314" .
+<neo4j://individuals#105509> <urn:absolute://harbourpolitica/ontology/identifier> "a95c4e4d-5cb7-44f1-b072-81f321d24fb1" .
+
