@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.thequipu.com/graphstructure#"
+     xml:base="http://www.thequipu.com/graphstructure"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.thequipu.com/graphstructure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#CHILD -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#CHILD"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#FIRST -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#FIRST"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#HAS_BRIDGE -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#HAS_BRIDGE">
+        <rdfs:domain rdf:resource="http://www.thequipu.com/graphstructure#BridgeNodes"/>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#BridgeNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#HAS_INSTANCE -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#HAS_INSTANCE">
+        <rdfs:domain rdf:resource="http://www.thequipu.com/graphstructure#BridgeNodes"/>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#InstanceNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#HAS_INTERNAL_WIKIPEDIA_LINK_TO -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#HAS_INTERNAL_WIKIPEDIA_LINK_TO"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#INFERRED -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#INFERRED">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#IS_PART_OF -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#IS_PART_OF">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.thequipu.com/graphstructure#ConceptNodes"/>
+                    <rdf:Description rdf:about="http://www.thequipu.com/graphstructure#InstanceNodes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#BridgeNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#LAST -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#LAST"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#LINK_TO -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#LINK_TO"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#NEXT -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#NEXT"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#PRIMARY -->
+
+    <owl:ObjectProperty rdf:about="http://www.thequipu.com/graphstructure#PRIMARY">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:domain rdf:resource="http://www.thequipu.com/graphstructure#ConceptNodes"/>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#ConceptNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
+        <rdfs:domain rdf:resource="http://www.thequipu.com/graphstructure#ConceptNodes"/>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#ConceptNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+        <rdfs:domain rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+        <rdfs:range rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#dateString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#dateString"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasAnchorText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasAnchorText"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasCitationTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasCitationTitle"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasImageID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasImageID"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasImageUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasImageUrl"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasLicense -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasLicense"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasShortDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasShortDescription"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasTranslation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasTranslation"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasUri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasUri"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasUrl"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasWikiLinkLikelihood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasWikiLinkLikelihood"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasWikiPage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasWikiPage"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasWikipediaAnchorText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasWikipediaAnchorText"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#hasWikipediaCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#hasWikipediaCategory"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#isNamedEntity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.thequipu.com/graphstructure#isNamedEntity"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#BlankNodes -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#BlankNodes">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#BridgeNodes -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#BridgeNodes">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.thequipu.com/graphstructure#HAS_BRIDGE"/>
+                        <owl:someValuesFrom rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.thequipu.com/graphstructure#IS_PART_OF"/>
+                        <owl:someValuesFrom rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#ConceptNodes -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#ConceptNodes">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#Day -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#Day">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#TimeTree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#InstanceNodes -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#InstanceNodes">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#Nodes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#KnowledgeBase -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#KnowledgeBase"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#Month -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#Month">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#TimeTree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#Nodes -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#Nodes">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.thequipu.com/graphstructure#hasUri"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.thequipu.com/graphstructure#isNamedEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#TimeTree -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#TimeTree"/>
+    
+
+
+    <!-- http://www.thequipu.com/graphstructure#Year -->
+
+    <owl:Class rdf:about="http://www.thequipu.com/graphstructure#Year">
+        <rdfs:subClassOf rdf:resource="http://www.thequipu.com/graphstructure#TimeTree"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
